@@ -1,0 +1,6 @@
+@mixin default_container($height, $border: "none") {
+  width: 70vw;
+  margin: auto;
+  height: $height;
+  border: $border;
+}

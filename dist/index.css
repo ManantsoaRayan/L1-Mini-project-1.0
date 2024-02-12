@@ -1,1 +1,99 @@
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=index.css.map */lor: #322e28;
+  padding: 0 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100px;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+}
+@media (min-width: 1024px) {
+  nav {
+    background-color: rgba(52, 43, 39, 0.1843137255);
+    -webkit-backdrop-filter: blur(22px);
+            backdrop-filter: blur(22px);
+  }
+}
+nav .nav-container {
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  nav .nav-container {
+    width: 70vw;
+    margin: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: "none";
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  nav .nav-container {
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+nav .navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+nav .navigation-menu .nav-title {
+  text-align: left;
+  font-size: 2.25rem;
+  color: #fb923c;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  nav .navigation-menu {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  nav .navigation-menu .nav-title {
+    font-size: 3.25rem;
+    justify-self: baseline;
+  }
+}
+@media (min-width: 1024px) {
+  nav .navigation-menu #nav_button {
+    display: none;
+  }
+}
+nav .navigation-menu #nav_button button {
+  background-color: transparent;
+  border: none;
+}
+nav .nav-items {
+  display: none;
+  width: 0;
+}
+@media (min-width: 1024px) {
+  nav .nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  nav .nav-items .nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
+  nav .nav-items .nav-links li {
+    padding: 15px 30px;
+  }
+  nav .nav-items .nav-links .active-section {
+    background-color: #222;
+    border-radius: 8px;
+  }
+  nav .nav-items .nav-links :nth-child(4) {
+    border-right: 2px solid #fee2e2;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,9 +1,5 @@
 <?php require 'partials/head.php'; ?>
-
-
-<main>
-  Hello world
-</main>
+<?php require 'components/nav.php'; ?>
 
 
 <?php require 'partials/foot.php'; ?>

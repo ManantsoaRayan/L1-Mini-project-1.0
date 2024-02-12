@@ -16,3 +16,10 @@ body {
   font-family: $default-font;
   color: $default-color;
 }
+
+a,
+a:active,
+a:visited {
+  color: $default-color;
+  text-decoration: none;
+}

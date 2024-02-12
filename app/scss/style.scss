@@ -1,3 +1,5 @@
 @use './mixins' as m;
+
+@forward "globals";
+@import "components";
 @import "variables";
-@import "globals";
