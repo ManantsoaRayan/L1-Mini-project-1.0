@@ -1,0 +1,136 @@
+header {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/main_bg.webp");
+  background-color: #222222a9;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  z-index: 1;
+  padding: 0 30px;
+
+  @include m.breakpoint(lg) {
+    display: flex;
+    align-items: center;
+  }
+
+  .web-hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+
+    @include m.breakpoint(xl) {
+      flex-direction: row;
+      @include m.default_container(70%);
+    }
+    @include m.breakpoint(lg) {
+      padding: 0;
+      @include m.default_container(70%);
+    }
+
+    &__top-section {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 3;
+      @include m.breakpoint(md) {
+        p {
+          max-width: 80%;
+        }
+      }
+
+      @include m.breakpoint(xl) {
+        padding: 0 50px;
+        height: 100%;
+        h1 {
+          max-width: 100%;
+          font-size: $text-5xl;
+        }
+      }
+
+      h1 {
+        max-width: 70%;
+      }
+
+      span {
+        color: $primary;
+      }
+      :nth-child(3) {
+        margin-top: 15px;
+      }
+      > div a:not(:last-child) {
+        @include m.create_btn($default-color, #222);
+        display: block;
+        text-align: center;
+        padding: 20px 30px;
+        margin-bottom: 10px;
+        @include m.hover {
+          background-color: transparent;
+          color: $default-color;
+        }
+        @include m.breakpoint(md) {
+          display: inline-block;
+          padding: 20px 45px;
+          margin-right: 30px;
+        }
+      }
+
+      div a:last-child {
+        @include m.create_btn($default-color, $primary);
+        display: block;
+        padding: 20px 30px;
+        text-align: center;
+        @include m.hover {
+          background-color: transparent;
+          color: $primary;
+        }
+        @include m.breakpoint(md) {
+          display: inline-block;
+          padding: 20px 45px;
+        }
+      }
+    }
+
+    &__bottom-section {
+      display: none;
+      border: 2px solid black;
+      background-image: url("/app/assets/images/vision-img.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include m.breakpoint(md) {
+        display: block;
+        z-index: 3;
+        width: 100%;
+        height: 30%;
+      }
+
+      @include m.breakpoint(xl) {
+        height: 60%;
+      }
+    }
+  }
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 100vh solid $transparent-bg;
+  border-right: 100vw solid $transparent-bg;
+  z-index: 0;
+  @include m.breakpoint(xl) {
+    border-right: 100vw solid transparent;
+  }
+}
