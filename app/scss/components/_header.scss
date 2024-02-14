@@ -101,11 +101,14 @@ header {
 
     &__bottom-section {
       display: none;
-      border: 2px solid black;
-      background-image: url("/app/assets/images/vision-img.jpg");
+      box-shadow: 0.3em 0.3em 10px #222;
+      background-blend-mode: multiply;
+      background: url("/app/assets/images/vision-img.jpg");
       background-size: cover;
+      background-color: #22222287;
       background-repeat: no-repeat;
       background-position: center;
+      opacity: 0.8;
 
       @include m.breakpoint(md) {
         display: block;

@@ -1,20 +1,21 @@
-/*# sourceMappingURL=index.css.map */ center;
-  width: 100vw;
-  background-color: #322e28;
-  padding: 0 20px;
-  height: -moz-fit-content;
-  height: fit-content;
-  min-height: 100px;
-  top: 0;
-  position: fixed;
-  z-index: 99;
+/*# sourceMappingURL=index.css.map */ce-banner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
-@media (min-width: 1024px) {
-  nav {
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-    align-items: baseline;
+@media (min-width: 1280px) {
+  .service-banner {
+    width: 70vw;
+    margin: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: "none";
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+}/*# sourceMappingURL=index.css.map */seline;
   }
 }
 nav .nav-container {
@@ -255,6 +256,14 @@ header .web-hero__top-section div a:last-child:hover {
 }
 header .web-hero__bottom-section {
   display: none;
+  box-shadow: 0.3em 0.3em 10px #222;
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/vision-img.jpg");
+  background-size: cover;
+  background-color: rgba(34, 34, 34, 0.5294117647);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
 }
 @media (min-width: 768px) {
   header .web-hero__bottom-section {
@@ -262,12 +271,11 @@ header .web-hero__bottom-section {
     z-index: 3;
     width: 100%;
     height: 30%;
-    border: 2px solid black;
   }
 }
 @media (min-width: 1280px) {
   header .web-hero__bottom-section {
-    height: 50%;
+    height: 60%;
   }
 }
 
@@ -286,4 +294,68 @@ header::before {
   header::before {
     border-right: 100vw solid transparent;
   }
+}
+
+.banner {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #322e28;
+  display: flex;
+  align-items: center;
+}
+
+.banner__card {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px 20px;
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .banner__card {
+    width: 50vw;
+  }
+}
+@media (min-width: 768px) {
+  .banner__card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (min-width: 1280px) {
+  .banner__card {
+    width: 30%;
+    grid-template-columns: 1fr;
+  }
+}
+.banner__card .service_logo {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.banner__card .service_logo img {
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 1280px) {
+  .banner__card .service_logo img {
+    width: 40%;
+  }
+}
+.banner__card .service_description {
+  padding: 5px 10px;
+}
+@media (min-width: 1280px) {
+  .banner__card .service_description {
+    text-align: center;
+  }
+}
+.banner__card .service_description h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: #fb923c;
 }/*# sourceMappingURL=index.css.map */

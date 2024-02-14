@@ -15,7 +15,7 @@ function startSlideShow() {
   setInterval(() => {
     upDateHeroImage();
     count = (count + 1) % header_slide_image.length;
-  }, 1500);
+  }, 3000);
 }
 
 function upDateHeroImage() {

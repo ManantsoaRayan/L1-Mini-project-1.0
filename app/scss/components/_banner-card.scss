@@ -1,0 +1,48 @@
+.banner__card {
+  width: 100vw;
+  height: fit-content;
+  padding: 10px 20px;
+  display: flex;
+
+  @include m.breakpoint(lg) {
+    width: 50vw;
+  }
+
+  @include m.breakpoint(md) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: fit-content;
+  }
+
+  @include m.breakpoint(xl) {
+    width: 30%;
+    grid-template-columns: 1fr;
+  }
+  .service_logo {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      margin: auto;
+      @include m.breakpoint(xl) {
+        width: 40%;
+      }
+    }
+  }
+
+  .service_description {
+    padding: 5px 10px;
+    @include m.breakpoint(xl) {
+      text-align: center;
+    }
+
+    h4 {
+      font-size: $text-2xl;
+      margin-bottom: 0;
+      color: $primary;
+    }
+  }
+}

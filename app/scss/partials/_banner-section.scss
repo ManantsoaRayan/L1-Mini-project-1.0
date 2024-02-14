@@ -1,0 +1,13 @@
+.service-banner {
+  @include m.breakpoint(lg) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include m.breakpoint(xl) {
+    @include m.default_container(fit-content);
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+}

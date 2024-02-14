@@ -1,4 +1,6 @@
 nav {
+  display: flex;
+  align-items: center;
   width: 100vw;
   background-color: $secondary2;
   padding: 0 20px;
@@ -9,8 +11,9 @@ nav {
   z-index: 99;
 
   @include m.breakpoint(lg) {
-    background-color: $transparent-bg;
-    backdrop-filter: blur(22px);
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    align-items: baseline;
   }
 
   .nav-container {
@@ -41,6 +44,10 @@ nav {
       font-weight: 700;
     }
 
+    @include m.breakpoint(md) {
+      padding: 0 50px;
+    }
+
     @include m.breakpoint(lg) {
       width: fit-content;
 
@@ -48,6 +55,10 @@ nav {
         font-size: $text-6xl;
         justify-self: baseline;
       }
+    }
+
+    @include m.breakpoint(xl) {
+      padding-left: 0;
     }
 
     #nav_button {

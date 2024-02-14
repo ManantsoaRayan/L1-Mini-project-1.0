@@ -1,6 +1,43 @@
+@use './responsive' as r;
+
 @mixin default_container($height, $border: "none") {
   width: 70vw;
   margin: auto;
   height: $height;
   border: $border;
+}
+
+@mixin create_btn($color, $bgColor) {
+  padding: 15px 45px;
+  background-color: $bgColor;
+  color: $color;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  border-radius: 5px;
+  align-self: baseline;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color;
+    border: 1px solid $bgColor;
+    color: $bgColor;
+    font-weight: bold;
+    @content;
+  }
+}
+
+@mixin rounded_btn($color, $bgColor) {
+  @include createBtn($color, $bgColor);
+  border-radius: 30px;
+  &:hover {
+    background-color: $bgColor;
+    color: $color;
+  }
+}
+@mixin hover {
+  &:hover {
+    @content;
+  }
 }
