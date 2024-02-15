@@ -1,0 +1,61 @@
+.utility {
+  width: 100%;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  background-color: $transparent-bg;
+  padding: 0 5px;
+  border-radius: 12px;
+
+  .utility__btn {
+    height: 50%;
+    width: 15%;
+    background-color: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease;
+
+    @include m.breakpoint(xl) {
+      border-radius: 0;
+      height: 70px;
+      width: 70px;
+
+      @include m.hover {
+        span {
+          display: block;
+        }
+      }
+    }
+
+    @include m.breakpoint(md) {
+      height: 50px;
+      width: 50px;
+    }
+
+    span {
+      width: 100%;
+      height: 100%;
+      border: 3px solid $primary;
+      border-radius: 50%;
+      margin: auto;
+      @include m.breakpoint(xl) {
+        border-radius: 0;
+        display: none;
+      }
+    }
+  }
+
+  .utility__description {
+    width: 90%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+
+    .hidden-description {
+      display: none;
+    }
+  }
+}

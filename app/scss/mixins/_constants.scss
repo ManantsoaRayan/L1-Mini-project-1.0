@@ -1,7 +1,7 @@
 @use './responsive' as r;
 
 @mixin default_container($height, $border: "none") {
-  width: 70vw;
+  width: 80vw;
   margin: auto;
   height: $height;
   border: $border;
