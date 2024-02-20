@@ -1,3 +1,12 @@
+// navigation menu
+
+const humberger_menu = document.getElementById("navigation_btn");
+const nav_items = document.querySelector(".nav-items");
+
+humberger_menu.onclick = () => {
+  nav_items.classList.toggle("menu_open");
+};
+
 // header slide_show
 const header_slide_image = [
   "/app/assets/images/blog-1.jpg",

@@ -29,7 +29,7 @@
 }
 
 @mixin rounded_btn($color, $bgColor) {
-  @include createBtn($color, $bgColor);
+  @include create_btn($color, $bgColor);
   border-radius: 30px;
   &:hover {
     background-color: $bgColor;

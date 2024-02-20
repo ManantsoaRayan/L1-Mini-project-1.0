@@ -4,7 +4,7 @@
       <div class="nav-title">Co-Deliver</div>
       <!-- humberger Menu -->
       <div id="nav_button">
-        <button type="button">
+        <button type="button" id="navigation_btn">
           <!-- <img src="/images/menu-svgrepo-com.svg" alt="Menu" class="h-16 fill-slate-100"> -->
           <svg fill="#000000" width="100px" height="70px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <title>menu</title>

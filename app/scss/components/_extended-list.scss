@@ -7,6 +7,27 @@
   padding: 0 5px;
   border-radius: 12px;
 
+  @include m.breakpoint(xl) {
+    transition: all 1s ease-in-out;
+    @include m.hover {
+      background: linear-gradient(to right, $primary, $transparent-bg);
+
+      .utility__btn {
+        border-radius: 0;
+        transition: all 1s ease;
+        height: 70px;
+        width: 70px;
+        transform: rotate(180deg);
+
+        span {
+          display: block;
+          transform: rotate(45deg);
+          border-color: $secondary2;
+        }
+      }
+    }
+  }
+
   .utility__btn {
     height: 50%;
     width: 15%;
@@ -15,17 +36,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 300ms ease;
 
     @include m.breakpoint(xl) {
       border-radius: 0;
+      transition: all 1s ease;
       height: 70px;
       width: 70px;
 
-      @include m.hover {
-        span {
-          display: block;
-        }
+      span {
+        transform: rotate(0);
       }
     }
 
@@ -42,7 +61,14 @@
       margin: auto;
       @include m.breakpoint(xl) {
         border-radius: 0;
+        transition: all 1s ease;
         display: none;
+
+        @include m.hover {
+          transform: rotate(45deg);
+          background-color: $primary;
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -53,6 +79,9 @@
     padding: 0 20px;
     display: flex;
     align-items: center;
+
+    @include m.breakpoint(xl) {
+    }
 
     .hidden-description {
       display: none;

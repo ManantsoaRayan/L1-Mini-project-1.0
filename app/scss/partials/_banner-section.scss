@@ -11,3 +11,60 @@
     margin: auto;
   }
 }
+
+.confidentials {
+  text-align: center;
+  min-height: 400px;
+
+  .confidentials_container {
+    padding: 30px 0;
+    line-height: 1.7;
+    width: 100%;
+    height: fit-content;
+
+    @include m.breakpoint(xl) {
+      @include m.default_container(fit-content);
+    }
+  }
+
+  &__content {
+    @include m.breakpoint(xl) {
+      margin: 20px 0;
+    }
+
+    h1 {
+      color: $secondary;
+
+      @include m.breakpoint(lg) {
+        font-size: $text-5xl;
+      }
+    }
+
+    div {
+      max-width: 80%;
+      margin: auto;
+      text-align: left;
+
+      @include m.breakpoint(md) {
+        max-width: 85%;
+      }
+      @include m.breakpoint(lg) {
+        max-width: 80%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__rate {
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+
+    .rate {
+      padding: 30px;
+      border: 2px solid $secondary;
+    }
+  }
+}

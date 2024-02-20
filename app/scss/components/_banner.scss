@@ -5,3 +5,48 @@
   display: flex;
   align-items: center;
 }
+
+.mini-contact {
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/phone_consulting.webp");
+  background-color: $transparent-bg;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  min-height: fit-content;
+  padding: 10px 0;
+  text-align: center;
+  @include m.breakpoint(xl) {
+    height: 200px;
+    text-align: left;
+  }
+
+  .contact {
+    @include m.breakpoint(xl) {
+      @include m.default_container(fit-content);
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .contact-text {
+    width: 100%;
+    text-align: left;
+    padding: 25px 20px;
+    @include m.breakpoint(md) {
+      text-align: center;
+    }
+    @include m.breakpoint(lg) {
+      margin: auto;
+      width: 80%;
+    }
+    @include m.breakpoint(xl) {
+      text-align: left;
+    }
+  }
+
+  a {
+    @include m.rounded_btn($default-color, $secondary);
+  }
+}

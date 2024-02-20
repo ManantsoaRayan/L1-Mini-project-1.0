@@ -1,0 +1,75 @@
+.offers-card {
+  width: 80%;
+  height: 80%;
+  background-blend-mode: color multiply;
+  background-color: transparent;
+  background: linear-gradient(to top, rgba(255, 255, 255), $beige);
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+
+  @include m.breakpoint(lg) {
+    width: 300px;
+    height: 80%;
+    padding: 30px 0;
+    min-height: fit-content;
+  }
+
+  @include m.breakpoint(xl) {
+    width: 330px;
+    margin: 0;
+    height: 90%;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+
+    @include m.hover {
+      background: $transparent-bg;
+      backdrop-filter: blur(10px);
+      color: $default-color;
+      box-shadow: 0.2em 0.2em 20px $primary;
+      border: 2px solid $primary;
+      a {
+        background-color: $primary;
+      }
+    }
+  }
+
+  &__top {
+    width: 100%;
+    padding: 10px;
+    @include m.breakpoint(lg) {
+      padding: 0;
+    }
+
+    .card_price {
+      h1 {
+        font-size: 4em;
+      }
+      p {
+        margin: 0;
+        font-size: $text-sm;
+      }
+    }
+
+    p {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+
+    span {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: $primary;
+    }
+  }
+
+  .card_data {
+    padding-bottom: 30px;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  a {
+    @include m.rounded_btn($default-color, $secondary2);
+  }
+}

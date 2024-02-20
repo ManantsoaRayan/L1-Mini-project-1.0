@@ -1,0 +1,104 @@
+.offers-section {
+  background-color: $secondary2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  @include m.breakpoint(xl) {
+    height: 640px !important;
+    background-blend-mode: multiply;
+    background: url("/app/assets/images/deliveryman.webp");
+    background-color: $transparent-bg;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/delivery.webp");
+  background-color: $transparent-bg;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  .section-title {
+    font-size: x-large;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 20px;
+    @include m.breakpoint(xl) {
+      margin-bottom: 90px;
+    }
+  }
+
+  .offers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    color: $secondary2;
+    @include m.breakpoint(lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include m.breakpoint(xl) {
+      @include m.default_container(80%);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+
+    .offers-card:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.content-pricing {
+  background-color: $secondary2;
+  padding: 50px 15px;
+  text-align: center;
+  @include m.breakpoint(xl) {
+    @include m.default_container(fit-content);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+
+    .center-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: $text-5xl;
+    }
+
+    p {
+      max-width: 80%;
+    }
+  }
+
+  .center-text {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+  }
+
+  h1 {
+    color: $secondary;
+  }
+
+  a {
+    @include m.rounded_btn($secondary2, $primary);
+    @include m.hover {
+      background: $secondary2;
+      color: $primary;
+    }
+  }
+}

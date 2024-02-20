@@ -1,4 +1,5 @@
-/*# sourceMappingURL=index.css.map */ce-banner {
+@media (min-width: 1024px) {
+  .service-banner {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,6 +16,67 @@
     justify-content: space-between;
     margin: auto;
   }
+}
+
+.confidentials {
+  text-align: center;
+  min-height: 400px;
+}
+.confidentials .confidentials_container {
+  padding: 30px 0;
+  line-height: 1.7;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (min-width: 1280px) {
+  .confidentials .confidentials_container {
+    width: 80vw;
+    margin: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: "none";
+  }
+}
+@media (min-width: 1280px) {
+  .confidentials__content {
+    margin: 20px 0;
+  }
+}
+.confidentials__content h1 {
+  color: lightcoral;
+}
+@media (min-width: 1024px) {
+  .confidentials__content h1 {
+    font-size: 3rem;
+  }
+}
+.confidentials__content div {
+  max-width: 80%;
+  margin: auto;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .confidentials__content div {
+    max-width: 85%;
+  }
+}
+@media (min-width: 1024px) {
+  .confidentials__content div {
+    max-width: 80%;
+    text-align: center;
+  }
+}
+.confidentials__rate {
+  display: flex;
+  padding: 20px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.confidentials__rate .rate {
+  padding: 30px;
+  border: 2px solid lightcoral;
 }
 
 .motivation-section {
@@ -49,23 +111,26 @@
 }
 .user-motivation .top-section {
   height: 50%;
-  background: url("/app/assets/images/blog-1.jpg");
+  background: url("/app/assets/images/consulting_phone.webp");
   background-size: cover;
   background-position: center;
   overflow: hidden;
   opacity: 0.7;
-  transition: background 3ms ease-in-out;
 }
 @media (min-width: 1280px) {
   .user-motivation .top-section {
     height: auto;
+    background-position: initial;
     width: 50%;
+    transition: all 300ms ease-in-out;
+    background-size: cover;
   }
   .user-motivation .top-section:hover {
     background-size: cover;
-    background-position: initial;
+    background-position-x: -10px;
     background-repeat: no-repeat;
     background-color: rgba(52, 43, 39, 0.773);
+    transform: scaleX(110%);
   }
 }
 .user-motivation .bottom-section {
@@ -97,126 +162,115 @@
 }
 .user-motivation .bottom-section .embeded-list .utility:not(:last-child) {
   margin-bottom: 20px;
-}/*# sourceMappingURL=index.css.map */ nav .nav-items .nav-links :nth-child(4) {
-    border-right: 2px solid #fee2e2;
-  }
 }
 
-header {
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-  background-blend-mode: multiply;
-  background: url("/app/assets/images/main_bg.webp");
-  background-color: rgba(34, 34, 34, 0.662745098);
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  z-index: 1;
-  padding: 0 30px;
-}
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    align-items: center;
-  }
-}
-header .web-hero {
-  width: 100%;
-  height: 100%;
+.offers-section {
+  background-color: #322e28;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
+  padding: 30px 0;
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/delivery.webp");
+  background-color: rgba(52, 43, 39, 0.773);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 @media (min-width: 1280px) {
-  header .web-hero {
-    flex-direction: row;
-    width: 80vw;
-    margin: auto;
-    height: 70%;
-    border: "none";
+  .offers-section {
+    height: 640px !important;
+    background-blend-mode: multiply;
+    background: url("/app/assets/images/deliveryman.webp");
+    background-color: rgba(52, 43, 39, 0.773);
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
-@media (min-width: 1024px) {
-  header .web-hero {
-    padding: 0;
-    width: 80vw;
-    margin: auto;
-    height: 70%;
-    border: "none";
+.offers-section .section-title {
+  font-size: x-large;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  letter-spacing: 20px;
+}
+@media (min-width: 1280px) {
+  .offers-section .section-title {
+    margin-bottom: 90px;
   }
 }
-header .web-hero__top-section {
-  width: 100%;
-  height: 50%;
+.offers-section .offers {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  z-index: 3;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  color: #322e28;
 }
-@media (min-width: 768px) {
-  header .web-hero__top-section p {
+@media (min-width: 1024px) {
+  .offers-section .offers {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1280px) {
+  .offers-section .offers {
+    width: 80vw;
+    margin: auto;
+    height: 80%;
+    border: "none";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+.offers-section .offers .offers-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.content-pricing {
+  background-color: #322e28;
+  padding: 50px 15px;
+  text-align: center;
+}
+@media (min-width: 1280px) {
+  .content-pricing {
+    width: 80vw;
+    margin: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: "none";
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  .content-pricing .center-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-pricing h1 {
+    font-size: 3rem;
+  }
+  .content-pricing p {
     max-width: 80%;
   }
 }
-@media (min-width: 1280px) {
-  header .web-hero__top-section {
-    padding: 0 50px;
-    height: 100%;
-  }
-  header .web-hero__top-section h1 {
-    max-width: 100%;
-    font-size: 3rem;
-  }
+.content-pricing .center-text {
+  margin-bottom: 20px;
+  padding: 10px 20px;
 }
-header .web-hero__top-section h1 {
-  max-width: 70%;
+.content-pricing h1 {
+  color: lightcoral;
 }
-header .web-hero__top-section span {
-  color: #fb923c;
-}
-header .web-hero__top-section :nth-child(3) {
-  margin-top: 15px;
-}
-header .web-hero__top-section > div a:not(:last-child) {
-  padding: 15px 45px;
-  background-color: #222;
-  color: #fee2e2;
-  font-size: 16px;
-  font-weight: bold;
-  border: 1px solid transparent;
-  text-transform: uppercase;
-  border-radius: 5px;
-  align-self: baseline;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  padding: 20px 30px;
-  margin-bottom: 10px;
-}
-header .web-hero__top-section > div a:not(:last-child):hover {
-  background-color: #fee2e2;
-  border: 1px solid #222;
-  color: #222;
-  font-weight: bold;
-}
-header .web-hero__top-section > div a:not(:last-child):hover {
-  background-color: transparent;
-  color: #fee2e2;
-}
-@media (min-width: 768px) {
-  header .web-hero__top-section > div a:not(:last-child) {
-    display: inline-block;
-    padding: 20px 45px;
-    margin-right: 30px;
-  }
-}
-header .web-hero__top-section div a:last-child {
+.content-pricing a {
   padding: 15px 45px;
   background-color: #fb923c;
-  color: #fee2e2;
+  color: #322e28;
   font-size: 16px;
   font-weight: bold;
   border: 1px solid transparent;
@@ -224,39 +278,22 @@ header .web-hero__top-section div a:last-child {
   border-radius: 5px;
   align-self: baseline;
   cursor: pointer;
-  display: block;
-  padding: 20px 30px;
-  text-align: center;
+  border-radius: 30px;
 }
-header .web-hero__top-section div a:last-child:hover {
-  background-color: #fee2e2;
+.content-pricing a:hover {
+  background-color: #322e28;
   border: 1px solid #fb923c;
   color: #fb923c;
   font-weight: bold;
 }
-header .web-hero__top-section div a:last-child:hover {
-  background-color: transparent;
+.content-pricing a:hover {
+  background-color: #fb923c;
+  color: #322e28;
+}
+.content-pricing a:hover {
+  background: #322e28;
   color: #fb923c;
-}
-@media (min-width: 768px) {
-  header .web-hero__top-section div a:last-child {
-    display: inline-block;
-    padding: 20px 45px;
-  }
-}
-header .web-hero__bottom-section {
-  display: none;
-  box-shadow: 0.3em 0.3em 10px #222;
-  background-blend-mode: multiply;
-  background: url("/app/assets/images/vision-img.jpg");
-  background-size: cover;
-  background-color: rgba(34, 34, 34, 0.5294117647);
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.8;
-}
-@media (min-width: 768px) {
-  header .web-hero__bottom-section {
+}/*# sourceMappingURL=index.css.map */r .web-hero__bottom-section {
     display: block;
     z-index: 3;
     width: 100%;
@@ -293,6 +330,81 @@ header::before {
   background-color: #322e28;
   display: flex;
   align-items: center;
+}
+
+.mini-contact {
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/phone_consulting.webp");
+  background-color: rgba(52, 43, 39, 0.773);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding: 10px 0;
+  text-align: center;
+}
+@media (min-width: 1280px) {
+  .mini-contact {
+    height: 200px;
+    text-align: left;
+  }
+}
+@media (min-width: 1280px) {
+  .mini-contact .contact {
+    width: 80vw;
+    margin: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: "none";
+    display: flex;
+    align-items: center;
+  }
+}
+.mini-contact .contact-text {
+  width: 100%;
+  text-align: left;
+  padding: 25px 20px;
+}
+@media (min-width: 768px) {
+  .mini-contact .contact-text {
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .mini-contact .contact-text {
+    margin: auto;
+    width: 80%;
+  }
+}
+@media (min-width: 1280px) {
+  .mini-contact .contact-text {
+    text-align: left;
+  }
+}
+.mini-contact a {
+  padding: 15px 45px;
+  background-color: lightcoral;
+  color: #fee2e2;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  border-radius: 5px;
+  align-self: baseline;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.mini-contact a:hover {
+  background-color: #fee2e2;
+  border: 1px solid lightcoral;
+  color: lightcoral;
+  font-weight: bold;
+}
+.mini-contact a:hover {
+  background-color: lightcoral;
+  color: #fee2e2;
 }
 
 .banner__card {
@@ -359,6 +471,26 @@ header::before {
   padding: 0 5px;
   border-radius: 12px;
 }
+@media (min-width: 1280px) {
+  .utility {
+    transition: all 1s ease-in-out;
+  }
+  .utility:hover {
+    background: linear-gradient(to right, #fb923c, rgba(52, 43, 39, 0.773));
+  }
+  .utility:hover .utility__btn {
+    border-radius: 0;
+    transition: all 1s ease;
+    height: 70px;
+    width: 70px;
+    transform: rotate(180deg);
+  }
+  .utility:hover .utility__btn span {
+    display: block;
+    transform: rotate(45deg);
+    border-color: #322e28;
+  }
+}
 .utility .utility__btn {
   height: 50%;
   width: 15%;
@@ -367,16 +499,16 @@ header::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 300ms ease;
 }
 @media (min-width: 1280px) {
   .utility .utility__btn {
     border-radius: 0;
+    transition: all 1s ease;
     height: 70px;
     width: 70px;
   }
-  .utility .utility__btn:hover span {
-    display: block;
+  .utility .utility__btn span {
+    transform: rotate(0);
   }
 }
 @media (min-width: 768px) {
@@ -395,7 +527,13 @@ header::before {
 @media (min-width: 1280px) {
   .utility .utility__btn span {
     border-radius: 0;
+    transition: all 1s ease;
     display: none;
+  }
+  .utility .utility__btn span:hover {
+    transform: rotate(45deg);
+    background-color: #fb923c;
+    opacity: 0.7;
   }
 }
 .utility .utility__description {
@@ -413,4 +551,97 @@ header::before {
   width: 100vw;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.offers-card {
+  width: 80%;
+  height: 80%;
+  background-blend-mode: color multiply;
+  background-color: transparent;
+  background: linear-gradient(to top, rgb(255, 255, 255), #fbaf5d);
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+}
+@media (min-width: 1024px) {
+  .offers-card {
+    width: 300px;
+    height: 80%;
+    padding: 30px 0;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+@media (min-width: 1280px) {
+  .offers-card {
+    width: 330px;
+    margin: 0;
+    height: 90%;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+  }
+  .offers-card:hover {
+    background: rgba(52, 43, 39, 0.773);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    color: #fee2e2;
+    box-shadow: 0.2em 0.2em 20px #fb923c;
+    border: 2px solid #fb923c;
+  }
+  .offers-card:hover a {
+    background-color: #fb923c;
+  }
+}
+.offers-card__top {
+  width: 100%;
+  padding: 10px;
+}
+@media (min-width: 1024px) {
+  .offers-card__top {
+    padding: 0;
+  }
+}
+.offers-card__top .card_price h1 {
+  font-size: 4em;
+}
+.offers-card__top .card_price p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+.offers-card__top p {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.offers-card__top span {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fb923c;
+}
+.offers-card .card_data {
+  padding-bottom: 30px;
+  margin: 0;
+  font-size: 20px;
+}
+.offers-card a {
+  padding: 15px 45px;
+  background-color: #322e28;
+  color: #fee2e2;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  border-radius: 5px;
+  align-self: baseline;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.offers-card a:hover {
+  background-color: #fee2e2;
+  border: 1px solid #322e28;
+  color: #322e28;
+  font-weight: bold;
+}
+.offers-card a:hover {
+  background-color: #322e28;
+  color: #fee2e2;
 }/*# sourceMappingURL=index.css.map */

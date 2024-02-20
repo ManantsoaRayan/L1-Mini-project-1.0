@@ -1,4 +1,5 @@
 nav {
+  // nav setup
   display: flex;
   align-items: center;
   width: 100vw;
@@ -72,9 +73,38 @@ nav {
     }
   }
 
+  .menu_open {
+    display: flex !important;
+    align-items: center;
+    width: 100vw;
+    transition: all 3s ease-in-out;
+    position: fixed;
+    left: 20px;
+    align-items: center;
+
+    .active-section {
+      background-color: #222;
+    }
+
+    ul {
+      width: 80vw;
+      list-style: none;
+      background-color: $secondary2;
+      margin-top: 2px;
+      margin-right: 0;
+
+      li {
+        width: 100%;
+        padding: 20px 30px;
+      }
+    }
+  }
+
   .nav-items {
     display: none;
-    width: 0;
+    width: 100vw;
+    height: fit-content;
+
     @include m.breakpoint(lg) {
       display: flex;
       justify-content: center;
