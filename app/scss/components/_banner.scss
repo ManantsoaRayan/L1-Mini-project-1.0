@@ -6,6 +6,19 @@
   align-items: center;
 }
 
+.about-banner {
+  flex-direction: column;
+
+  .section-title {
+    h1 {
+      letter-spacing: 20px;
+    }
+    word-spacing: 10px;
+    text-align: center;
+    font-size: $text-2xl;
+  }
+}
+
 .mini-contact {
   background-blend-mode: multiply;
   background: url("/app/assets/images/phone_consulting.webp");
@@ -48,5 +61,21 @@
 
   a {
     @include m.rounded_btn($default-color, $secondary);
+  }
+}
+
+.service-update {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 10px;
+  @include m.breakpoint(xl) {
+    .section-title {
+      padding: 30px;
+    }
+
+    .services-banner {
+      display: flex;
+    }
   }
 }

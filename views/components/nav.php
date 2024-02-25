@@ -1,7 +1,7 @@
 <nav class="navigation">
   <div class="nav-container">
     <div class="navigation-menu">
-      <div class="nav-title">Co-Deliver</div>
+      <div class="nav-title">Co-Delivery</div>
       <!-- humberger Menu -->
       <div id="nav_button">
         <button type="button" id="navigation_btn">
@@ -25,8 +25,7 @@
         <li class=<?= active_link('/')  ?>><a href="/">Home</a></li>
         <li class=<?= active_link('/about')  ?>><a href="/about">About</a></li>
         <li class=<?= active_link('/offer')  ?>><a href="/offer">Offers</a></li>
-        <li><a href="/">Login</a></li>
-        <li><a href="/">Register</a></li>
+        <li class=<?= active_link('/login')  ?>><a href="/login">Login</a></li>
       </ul>
     </div>
   </div>

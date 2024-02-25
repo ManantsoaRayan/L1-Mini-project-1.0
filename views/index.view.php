@@ -112,6 +112,79 @@
     </div>
   </div>
 
+  <!-- service update -->
+
+  <div class="banner service-update">
+    <div class="section-title">
+      <h1>Service update</h1>
+    </div>
+    <div class="services-banner">
+      <?php require "components/services-card.php" ?>
+      <?php require "components/services-card.php" ?>
+      <?php require "components/services-card.php" ?>
+    </div>
+  </div>
+
+  <!-- testimonials -->
+  <div class="testimonials block_container">
+    <div class="testimonials-container">
+      <div class="section-title">
+        <h1>testimonials</h1>
+      </div>
+      <div class="testimonials-card">
+        <div class="card-profile">
+          <div class="card-profile-container">
+            <img src="/app/assets/images/elon_musk_royal_society.webp" alt="Elon musk">
+            <p>Elon Musk</p>
+          </div>
+        </div>
+        <div class="card-profile-text">
+          <p>
+            The system of this compay is the best I ever seen.
+            With their confidentiality and their way of working.
+            They provide Speed and perfect apointement.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati totam rerum ut provident excepturi!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- team section -->
+
+  <div class="team-section block_container">
+    <div class="team-container">
+      <div class="section-title">
+        <h1>Team</h1>
+      </div>
+      <div class="team-card">
+        <div class="portfolio-card">
+          <img src="/app/assets/images/NyAvo.jpg" alt="A Developer">
+          <div class="portfolio-card-body">
+            <h2>Ny Avo</h2>
+            <p>Developer Frontend</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="/app/assets/images/zah2.jpg" alt="A Developer">
+          <div class="portfolio-card-body">
+            <h2>Ma. Rayan</h2>
+            <p> Project Manager </p>
+            <p>ManantsaoRayan@gmail.com</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="/app/assets/images/Photo-Manda.jpg" alt="A Developer">
+          <div class="portfolio-card-body">
+            <h2>Manda</h2>
+            <p>Developer Frontend</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </main>
+
 
 <?php require 'partials/foot.php'; ?>

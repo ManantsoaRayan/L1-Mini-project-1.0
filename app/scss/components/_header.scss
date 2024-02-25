@@ -2,11 +2,7 @@ header {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  background-blend-mode: multiply;
-  background: url("/app/assets/images/main_bg.webp");
-  background-color: #222222a9;
-  background-size: cover;
-  background-position: center;
+
   overflow: hidden;
   z-index: 1;
   padding: 0 30px;
@@ -136,4 +132,26 @@ header::before {
   @include m.breakpoint(xl) {
     border-right: 100vw solid transparent;
   }
+}
+
+.header_home {
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/main_bg.webp");
+  background-color: #222222a9;
+  background-size: cover;
+  background-position: center;
+}
+.header_about {
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/worker_black.jpg");
+  background-color: #222222a9;
+  background-size: cover;
+  background-position: center;
+}
+.header_offers {
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/feline.jpg");
+  background-color: #222222a9;
+  background-size: cover;
+  background-position: center;
 }

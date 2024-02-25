@@ -1,0 +1,176 @@
+.testimonials {
+  text-align: center;
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/group_working.jpg");
+  background-color: $transparent-bg;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+}
+
+.testimonials-container {
+  background-color: $transparent-bg;
+  padding: 30px;
+
+  .section-title {
+    @include m.breakpoint(lg) {
+      font-size: $text-3xl;
+      padding: 20px 30px;
+    }
+  }
+
+  border: 2px solid $default_color;
+}
+
+.testimonials-card {
+  width: 100%;
+  overflow: hidden;
+  @include m.breakpoint(lg) {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+    .card-profile {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+
+    .card-profile-text {
+      width: 60%;
+    }
+  }
+
+  @include m.breakpoint(xl) {
+    .card-profile {
+      width: 30%;
+    }
+    .card-profile-text {
+      width: 70%;
+    }
+  }
+
+  .card-profile {
+    width: 150px;
+    border-radius: 12px;
+    margin: auto;
+    padding: 20px;
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .card-profile-text {
+    margin: auto;
+    padding: 10px 30px;
+    text-align: left;
+    color: $secondary;
+    font-size: $text-2xl;
+  }
+}
+
+// team card
+
+.team-section {
+  width: 100vw;
+  height: fit-content;
+  background-color: $secondary2;
+  // @include m.breakpoint(xl) {
+  //   height: 100vh;
+  // }
+
+  h1 {
+    margin: 0;
+    padding: 30px;
+  }
+
+  .center-text {
+    margin: 0;
+    h1 {
+      font-size: 40px;
+      letter-spacing: normal;
+      padding: 30px;
+    }
+  }
+
+  .section-title {
+    height: 20%;
+    // width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .team-card {
+    @include m.default_container(70%);
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+    @include m.breakpoint(xl) {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include m.breakpoint(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    justify-content: space-around;
+    overflow: hidden;
+  }
+
+  .portfolio-card {
+    height: 500px;
+    width: 350px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      border-bottom: 3px solid $secondary;
+      height: 100%;
+      vertical-align: center;
+      margin: 0;
+      transition: all 1.2s ease-in-out;
+      @include m.hover {
+        filter: brightness(70%);
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 110%;
+      text-align: center;
+      background: $transparent-bg;
+      color: $default_color;
+      position: relative;
+      bottom: 110%;
+      transition: all 0.4s ease-in-out;
+      transform: translateY(0);
+      @include m.breakpoint(xl) {
+        transform: translateY(110%);
+      }
+
+      h2 {
+        letter-spacing: 3px;
+        margin: 0;
+        @include m.hover {
+          color: $primary;
+          cursor: pointer;
+        }
+      }
+    }
+
+    @include m.hover {
+      div {
+        transform: translateY(0);
+      }
+    }
+  }
+}

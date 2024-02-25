@@ -24,3 +24,45 @@ a:visited {
   color: $default-color;
   text-decoration: none;
 }
+
+footer {
+  height: fit-content;
+  width: 100vw;
+  background-blend-mode: multiply;
+  background: url("/app/assets/images/secured.jpg");
+  background-color: $transparent-bg;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 30px;
+
+  .footer_container {
+    h1 {
+      font-size: $text-3xl;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .footer_section {
+      padding: 20px 30px;
+      p {
+        text-align: left;
+      }
+      h1 {
+        font-size: $text-3xl;
+      }
+
+      .footer_contact {
+        .section-title {
+          font-size: $text-5xl;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          width: 50%;
+        }
+      }
+    }
+  }
+}

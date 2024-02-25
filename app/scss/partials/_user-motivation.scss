@@ -6,6 +6,15 @@
   background-color: $transparent-bg;
 }
 
+.about-m {
+  @include m.breakpoint(xl) {
+    min-height: 400px;
+    .bottom-section {
+      min-height: 400px;
+    }
+  }
+}
+
 .user-motivation {
   height: 850px;
   width: 100%;
@@ -19,6 +28,10 @@
   @include m.breakpoint(xl) {
     display: flex;
     @include m.default_container(fit-content);
+  }
+
+  .about-motivation {
+    background: url("/app/assets/images/workers.jpg");
   }
 
   .top-section {

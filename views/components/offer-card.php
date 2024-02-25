@@ -1,8 +1,8 @@
 <div class="offers-card">
   <div class="offers-card__top">
     <div class="card_price">
-      <h1>200$</h1>
-      <p>per months</p>
+      <h1>20K</h1>
+      <p>per months in ARIARY</p>
     </div>
     <p>
       Get
